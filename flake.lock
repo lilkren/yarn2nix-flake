@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1610092614,
+        "narHash": "sha256-fRWne09P1yyINfoBJPFpHLM0nNlaubQQFA59UH7Mz8E=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c30ad096b2cd5f64d479a70e656b315ea5e96ae9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-20.09",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "yarn2Nix": "yarn2Nix"
+      }
+    },
+    "yarn2Nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1602250035,
+        "narHash": "sha256-DKpyyaY0xFUhc+QFZ2mwPQ4mCuOkAB9uw98PLEp9dZ8=",
+        "owner": "Profpatsch",
+        "repo": "yarn2Nix",
+        "rev": "7db64eaaecf8034f26601d65a22b8a5905c81b18",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Profpatsch",
+        "repo": "yarn2Nix",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
