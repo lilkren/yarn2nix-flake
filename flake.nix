@@ -9,7 +9,7 @@
 
     outputs = inputs@{ self, nixpkgs, ... }: 
     let 
-        system = "x86_64-linux"
+        system = "x86_64-linux";
         yarn2Nix = (nixpkgs.callPackage ((import inputs.yarn2Nix).yarn2Nix) {});
     in {
         packages."${system}" = {
