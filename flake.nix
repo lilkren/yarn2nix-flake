@@ -15,8 +15,6 @@
         });
         yarn2Nix = (npkgs.callPackage ((import myInputs.yarn2Nix)) {});
     in {
-        inherit myInputs;
-        inherit npkgs;
         packages."${system}" = {
             inherit yarn2Nix;
         }; 
