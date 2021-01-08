@@ -7,7 +7,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, ... }: 
+    outputs = myInputs@{ self, nixpkgs, ... }: 
     let 
         system = "x86_64-linux";
         npkgs = ((import nixpkgs) {
@@ -15,7 +15,7 @@
         });
         # yarn2Nix = (npkgs.callPackage ((import inputs.yarn2Nix)) {}).yarn2Nix;
     in {
-        inherit inputs;
+        inherit myInputs;
         inherit npkgs;
         # packages."${system}" = {
         #     inherit yarn2Nix;
