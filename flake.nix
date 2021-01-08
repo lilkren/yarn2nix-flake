@@ -13,7 +13,7 @@
         npkgs = ((import nixpkgs) {
             inherit system;
         });
-        yarn2Nix = (npkgs.callPackage ((import inputs.yarn2Nix).yarn2Nix) {});
+        yarn2Nix = (npkgs.callPackage ((import inputs.yarn2Nix)) {}).yarn2Nix;
     in {
         packages."${system}" = {
             inherit yarn2Nix;
