@@ -7,14 +7,15 @@
         };
     };
 
-  outputs = inputs@{ self, nixpkgs, ... }: 
+    outputs = inputs@{ self, nixpkgs, ... }: 
     let 
-      yarn2Nix = (nixpkgs.callPackage ((import inputs.yarn2Nix).yarn2Nix) {});
+        system = "x86_64-linux"
+        yarn2Nix = (nixpkgs.callPackage ((import inputs.yarn2Nix).yarn2Nix) {});
     in {
-      packages = {
-          inherit yarn2Nix;
-      }; 
+        packages."${system}" = {
+            inherit yarn2Nix;
+        }; 
 
-      defaultPackage = self.packages.yarn2Nix;
+        defaultPackage."${system}" = self.packages.yarn2Nix;
     };
 }
